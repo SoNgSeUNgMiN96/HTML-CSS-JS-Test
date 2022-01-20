@@ -7,6 +7,9 @@
     <title>testPage</title>
 </head>
 <body>
+    <script>
+        var mode = 'day';
+    </script>
     <h1>WEB</h1>
     <input type="button" style="margin: 50px 0px 0px 50px;"value="night" onclick="
     document.querySelector('body').style.backgroundColor='black';
@@ -15,6 +18,19 @@
     <input type="button" style="margin: 50px 0px 0px 20px;" value="day" onclick="
     document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';
+    ">
+    <input type="button" style="margin: 50px 0px 0px 20px;" value="night" onclick="
+    if(document.querySelector('body').dataset.mode ==='night'){
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('body').dataset.mode ='day';
+        this.value = 'night';
+    }else{
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('body').dataset.mode ='night';
+        this.value = 'day';
+    }       
     ">
     
 </body>
